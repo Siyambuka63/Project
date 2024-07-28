@@ -24,22 +24,25 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblName" alignment="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblName" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="316" max="32767" attributes="0"/>
+                  </Group>
                   <Component id="lblAge" alignment="0" max="32767" attributes="0"/>
-                  <Component id="lblGender" alignment="0" pref="300" max="32767" attributes="0"/>
+                  <Component id="lblGender" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblNumber" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblEmail" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblJob" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblPrice" alignment="0" max="32767" attributes="0"/>
-                  <Component id="lblRating" alignment="0" pref="300" max="32767" attributes="0"/>
-                  <Component id="lblEmail" alignment="0" max="32767" attributes="0"/>
-                  <Component id="lblNumber" alignment="0" max="32767" attributes="0"/>
-                  <Component id="lblMoreInfo" max="32767" attributes="0"/>
-                  <Component id="srpMoreInfo" max="32767" attributes="0"/>
-                  <Component id="srpSendInfo" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblRating" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblMoreInfo" alignment="0" max="32767" attributes="0"/>
+                  <Component id="srpMoreInfo" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblSendInfo" alignment="0" max="32767" attributes="0"/>
+                  <Component id="srpSendInfo" alignment="0" max="32767" attributes="0"/>
                   <Component id="BtnSend" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
