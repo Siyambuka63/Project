@@ -108,7 +108,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="srpJobs" pref="388" max="32767" attributes="0"/>
+                      <Component id="srpJobs" pref="403" max="32767" attributes="0"/>
                       <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                       <Component id="lblMoreInfo" max="32767" attributes="0"/>
                       <Component id="lblJobs" alignment="0" max="32767" attributes="0"/>

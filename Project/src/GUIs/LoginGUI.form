@@ -29,33 +29,27 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="lblSurname" max="32767" attributes="0"/>
-                          <Component id="lblFirstName" pref="100" max="32767" attributes="0"/>
-                          <Component id="lblPassword" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtSurname" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                          <Component id="txtFirstName" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                          <Component id="txtPassword" alignment="1" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnSignUp" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="btnSignUp" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFirstName" alignment="1" min="-2" pref="195" max="-2" attributes="0"/>
+                          <Component id="lblPassword" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtFirstName" min="-2" pref="195" max="-2" attributes="0"/>
+                          <Component id="txtPassword" alignment="1" min="-2" pref="195" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="btnLogin" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                       <Component id="btnCancel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -68,11 +62,6 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblSurname" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtSurname" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -100,17 +89,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblFirstName">
       <Properties>
-        <Property name="text" type="java.lang.String" value="First name:"/>
+        <Property name="text" type="java.lang.String" value="Enter email or phone number:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtFirstName">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblSurname">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Surname:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtSurname">
     </Component>
     <Component class="javax.swing.JLabel" name="lblPassword">
       <Properties>

@@ -24,26 +24,26 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblName" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="316" max="32767" attributes="0"/>
-                  </Group>
                   <Component id="lblAge" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblGender" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblNumber" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblEmail" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblJob" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblPrice" alignment="0" max="32767" attributes="0"/>
-                  <Component id="lblRating" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblMoreInfo" alignment="0" max="32767" attributes="0"/>
-                  <Component id="srpMoreInfo" alignment="0" max="32767" attributes="0"/>
+                  <Component id="srpMoreInfo" alignment="0" pref="403" max="32767" attributes="0"/>
                   <Component id="lblSendInfo" alignment="0" max="32767" attributes="0"/>
                   <Component id="srpSendInfo" alignment="0" max="32767" attributes="0"/>
                   <Component id="BtnSend" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -69,14 +69,14 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="lblPrice" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="lblRating" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="lblMoreInfo" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="srpMoreInfo" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="lblSendInfo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="srpSendInfo" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="BtnSend" min="-2" max="-2" attributes="0"/>
@@ -121,11 +121,6 @@
         <Property name="text" type="java.lang.String" value="Phone number:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblRating">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Rating:"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="lblEmail">
       <Properties>
         <Property name="text" type="java.lang.String" value="Email:"/>
@@ -137,6 +132,9 @@
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="srpMoreInfo">
+      <Properties>
+        <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+      </Properties>
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
@@ -146,6 +144,7 @@
         <Component class="javax.swing.JTextArea" name="txtMoreInfo">
           <Properties>
             <Property name="columns" type="int" value="20"/>
+            <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
           </Properties>
         </Component>
@@ -157,6 +156,9 @@
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="srpSendInfo">
+      <Properties>
+        <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+      </Properties>
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
@@ -166,6 +168,7 @@
         <Component class="javax.swing.JTextArea" name="txtSendInfo">
           <Properties>
             <Property name="columns" type="int" value="20"/>
+            <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
           </Properties>
         </Component>
@@ -178,6 +181,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnSendActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="(Tell the person where to find you, how you look or anything else)"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

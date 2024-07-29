@@ -35,7 +35,6 @@ public class EditProfile extends javax.swing.JFrame {
         lblAge = new javax.swing.JLabel();
         txtAge = new javax.swing.JFormattedTextField();
         lblGender = new javax.swing.JLabel();
-        cmbGender = new javax.swing.JComboBox<>();
         lblRole = new javax.swing.JLabel();
         pnlJob = new javax.swing.JPanel();
         lblJob = new javax.swing.JLabel();
@@ -54,10 +53,10 @@ public class EditProfile extends javax.swing.JFrame {
         lblEmail = new javax.swing.JLabel();
         rdbCustomer = new javax.swing.JRadioButton();
         rdbWorker = new javax.swing.JRadioButton();
+        txtGender = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Edit Profile");
-        setPreferredSize(new java.awt.Dimension(400, 704));
 
         btnBack.setText("Back");
 
@@ -68,8 +67,6 @@ public class EditProfile extends javax.swing.JFrame {
         lblAge.setText("Age:");
 
         lblGender.setText("Gender:");
-
-        cmbGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
 
         lblRole.setText("Role:");
 
@@ -90,12 +87,12 @@ public class EditProfile extends javax.swing.JFrame {
                 "Job", "Price"
             }
         ));
-        tblJobs.setRowHeight(30);
         srpJobs.setViewportView(tblJobs);
 
-        lblMoreInfo.setText("Additional Information:");
+        lblMoreInfo.setText("Additional Information: (Tell others more about you or your service)");
 
         txtMoreInfo.setColumns(20);
+        txtMoreInfo.setLineWrap(true);
         txtMoreInfo.setRows(5);
         srpMoreInfo.setViewportView(txtMoreInfo);
 
@@ -108,20 +105,21 @@ public class EditProfile extends javax.swing.JFrame {
                 .addGroup(pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlJobLayout.createSequentialGroup()
                         .addComponent(btnAdd)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                         .addComponent(btnDelete)
                         .addGap(109, 109, 109))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlJobLayout.createSequentialGroup()
                         .addComponent(srpJobs, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(pnlJobLayout.createSequentialGroup()
-                        .addGroup(pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblJob, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblMoreInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblJob, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlJobLayout.createSequentialGroup()
                         .addComponent(srpMoreInfo)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(pnlJobLayout.createSequentialGroup()
+                        .addComponent(lblMoreInfo)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         pnlJobLayout.setVerticalGroup(
             pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,23 +169,25 @@ public class EditProfile extends javax.swing.JFrame {
                             .addComponent(lblFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(150, 150, 150))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(150, 150, 150))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(rdbWorker, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addContainerGap())
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtFirstName)
+                                        .addContainerGap())
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(rdbCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addContainerGap()))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(rdbWorker, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addContainerGap())
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txtFirstName)
-                                    .addContainerGap())
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(rdbCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txtSurname, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addContainerGap()))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtSurname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cmbGender, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,7 +203,7 @@ public class EditProfile extends javax.swing.JFrame {
                                 .addComponent(btnApply)
                                 .addGap(94, 94, 94)
                                 .addComponent(btnCancel)
-                                .addGap(0, 114, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,8 +231,8 @@ public class EditProfile extends javax.swing.JFrame {
                     .addComponent(lblAge))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblGender))
+                    .addComponent(lblGender)
+                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNumber)
@@ -303,7 +303,6 @@ public class EditProfile extends javax.swing.JFrame {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnDelete;
-    private javax.swing.JComboBox<String> cmbGender;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblFirstName;
@@ -322,6 +321,7 @@ public class EditProfile extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField txtAge;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
+    private javax.swing.JTextField txtGender;
     private javax.swing.JTextArea txtMoreInfo;
     private javax.swing.JTextField txtNumber;
     private javax.swing.JTextField txtSurname;

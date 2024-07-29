@@ -26,11 +26,12 @@ public class RequestsGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btgRequests = new javax.swing.ButtonGroup();
         btnBack = new javax.swing.JButton();
         pnlFilter = new javax.swing.JPanel();
-        lblFilter = new javax.swing.JLabel();
-        cmbStatus = new javax.swing.JComboBox<>();
-        lblStatus = new javax.swing.JLabel();
+        lblRequests = new javax.swing.JLabel();
+        rdbSent = new javax.swing.JRadioButton();
+        rdbReceived = new javax.swing.JRadioButton();
         scpRequests = new javax.swing.JScrollPane();
         tblRequests = new javax.swing.JTable();
 
@@ -39,12 +40,25 @@ public class RequestsGUI extends javax.swing.JFrame {
 
         btnBack.setText("Back");
 
-        lblFilter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblFilter.setText("Filter by:");
+        lblRequests.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblRequests.setText("Show requests:");
 
-        cmbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sent", "Received", "Accepted", "Denied" }));
+        btgRequests.add(rdbSent);
+        rdbSent.setSelected(true);
+        rdbSent.setText("Sent");
+        rdbSent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbSentActionPerformed(evt);
+            }
+        });
 
-        lblStatus.setText("Status:");
+        btgRequests.add(rdbReceived);
+        rdbReceived.setText("Received");
+        rdbReceived.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbReceivedActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlFilterLayout = new javax.swing.GroupLayout(pnlFilter);
         pnlFilter.setLayout(pnlFilterLayout);
@@ -52,23 +66,24 @@ public class RequestsGUI extends javax.swing.JFrame {
             pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFilterLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(lblFilter, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                    .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(cmbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
+                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRequests, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlFilterLayout.createSequentialGroup()
+                        .addComponent(rdbSent, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(105, 105, 105)
+                        .addComponent(rdbReceived, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         pnlFilterLayout.setVerticalGroup(
             pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFilterLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblFilter)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblRequests)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblStatus))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(rdbSent)
+                    .addComponent(rdbReceived))
+                .addContainerGap())
         );
 
         tblRequests.setModel(new javax.swing.table.DefaultTableModel(
@@ -76,7 +91,7 @@ public class RequestsGUI extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Job", "Price", "Name", "Age", "Gender", "Rating"
+                "Job", "Price", "Name", "Age", "Gender", "Status"
             }
         ));
         scpRequests.setViewportView(tblRequests);
@@ -103,12 +118,20 @@ public class RequestsGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scpRequests, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                .addComponent(scpRequests, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void rdbSentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbSentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbSentActionPerformed
+
+    private void rdbReceivedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbReceivedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbReceivedActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,11 +169,12 @@ public class RequestsGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btgRequests;
     private javax.swing.JButton btnBack;
-    private javax.swing.JComboBox<String> cmbStatus;
-    private javax.swing.JLabel lblFilter;
-    private javax.swing.JLabel lblStatus;
+    private javax.swing.JLabel lblRequests;
     private javax.swing.JPanel pnlFilter;
+    private javax.swing.JRadioButton rdbReceived;
+    private javax.swing.JRadioButton rdbSent;
     private javax.swing.JScrollPane scpRequests;
     private javax.swing.JTable tblRequests;
     // End of variables declaration//GEN-END:variables

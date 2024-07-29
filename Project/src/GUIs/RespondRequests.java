@@ -36,11 +36,8 @@ public class RespondRequests extends javax.swing.JFrame {
         lblMoreInfo = new javax.swing.JLabel();
         srpMoreInfo = new javax.swing.JScrollPane();
         txtMoreInfo = new javax.swing.JTextArea();
-        lblStatus = new javax.swing.JLabel();
-        rdbReceived = new javax.swing.JRadioButton();
-        rdbAccepted = new javax.swing.JRadioButton();
-        rdbDenied = new javax.swing.JRadioButton();
-        btnApply = new javax.swing.JButton();
+        btnAccept = new javax.swing.JButton();
+        btnDeny = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,23 +59,19 @@ public class RespondRequests extends javax.swing.JFrame {
         txtMoreInfo.setRows(5);
         srpMoreInfo.setViewportView(txtMoreInfo);
 
-        lblStatus.setText("Status:");
-
-        btgStatus.add(rdbReceived);
-        rdbReceived.setText("Received");
-
-        btgStatus.add(rdbAccepted);
-        rdbAccepted.setText("Accepted");
-
-        btgStatus.add(rdbDenied);
-        rdbDenied.setText("Denied");
-        rdbDenied.addActionListener(new java.awt.event.ActionListener() {
+        btnAccept.setText("Accept");
+        btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdbDeniedActionPerformed(evt);
+                btnAcceptActionPerformed(evt);
             }
         });
 
-        btnApply.setText("Apply change");
+        btnDeny.setText("Deny");
+        btnDeny.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDenyActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,16 +85,15 @@ public class RespondRequests extends javax.swing.JFrame {
                     .addComponent(lblGender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblJob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(srpMoreInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addComponent(srpMoreInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
                     .addComponent(lblMoreInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(rdbReceived, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(rdbAccepted, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(rdbDenied, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnBack)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(btnApply, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnDeny, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -123,25 +115,23 @@ public class RespondRequests extends javax.swing.JFrame {
                 .addComponent(lblMoreInfo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(srpMoreInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblStatus)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rdbReceived)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rdbAccepted)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rdbDenied)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnApply)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAccept)
+                    .addComponent(btnDeny))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rdbDeniedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbDeniedActionPerformed
+    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rdbDeniedActionPerformed
+    }//GEN-LAST:event_btnAcceptActionPerformed
+
+    private void btnDenyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDenyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDenyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,18 +170,15 @@ public class RespondRequests extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgStatus;
-    private javax.swing.JButton btnApply;
+    private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnDeny;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblGender;
     private javax.swing.JLabel lblJob;
     private javax.swing.JLabel lblMoreInfo;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPrice;
-    private javax.swing.JLabel lblStatus;
-    private javax.swing.JRadioButton rdbAccepted;
-    private javax.swing.JRadioButton rdbDenied;
-    private javax.swing.JRadioButton rdbReceived;
     private javax.swing.JScrollPane srpMoreInfo;
     private javax.swing.JTextArea txtMoreInfo;
     // End of variables declaration//GEN-END:variables

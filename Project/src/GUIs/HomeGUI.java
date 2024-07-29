@@ -26,42 +26,194 @@ public class HomeGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnlMain = new javax.swing.JPanel();
+        btnReset = new javax.swing.JButton();
+        srpWorkers = new javax.swing.JScrollPane();
+        tblWorkers = new javax.swing.JTable();
+        pnlFilter = new javax.swing.JPanel();
+        lblFilter = new javax.swing.JLabel();
+        lblAgeRange = new javax.swing.JLabel();
+        lblGender = new javax.swing.JLabel();
+        lblJob = new javax.swing.JLabel();
+        txtJob = new javax.swing.JTextField();
+        btnFilterCancel = new javax.swing.JButton();
+        btnFilter = new javax.swing.JButton();
+        txtAgeRangeMin = new javax.swing.JFormattedTextField();
+        txtAgeRangeMax = new javax.swing.JFormattedTextField();
+        lblAgeRangeTo = new javax.swing.JLabel();
+        txtGender = new javax.swing.JTextField();
+        lblPriceRange = new javax.swing.JLabel();
+        txtPriceRangeMin = new javax.swing.JTextField();
+        txtPriceRangeMax = new javax.swing.JTextField();
+        lblPriceRangeTo = new javax.swing.JLabel();
         pnlSearch = new javax.swing.JPanel();
-        pnlSearch.setVisible(false);
         lblSearch = new javax.swing.JLabel();
         txtSearch = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
         btnSearchCancel = new javax.swing.JButton();
-        pnlFilter = new javax.swing.JPanel();
-        lblFilter = new javax.swing.JLabel();
-        lblAge = new javax.swing.JLabel();
-        lblGender = new javax.swing.JLabel();
-        lblJob = new javax.swing.JLabel();
-        cmbAge = new javax.swing.JComboBox<>();
-        cmbGender = new javax.swing.JComboBox<>();
-        cmbJob = new javax.swing.JComboBox<>();
-        txtJob = new javax.swing.JTextField();
-        btnFilterCancel = new javax.swing.JButton();
-        btnFilter = new javax.swing.JButton();
-        txtAge = new javax.swing.JFormattedTextField();
-        cmbRating = new javax.swing.JComboBox<>();
-        lblRating = new javax.swing.JLabel();
-        btnReset = new javax.swing.JButton();
-        srpWorkers = new javax.swing.JScrollPane();
-        tblWorkers = new javax.swing.JTable();
         barMenu = new javax.swing.JMenuBar();
         menuMenu = new javax.swing.JMenu();
         itemHome = new javax.swing.JMenuItem();
         itemProfile = new javax.swing.JMenuItem();
         itemRequests = new javax.swing.JMenuItem();
         itemSignOut = new javax.swing.JMenuItem();
-        menuSearch = new javax.swing.JMenu();
-        menuFilter = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Main");
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(0, 668));
+
+        btnReset.setText("Reset");
+
+        tblWorkers.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Job", "Price", "Name", "Age", "Gender"
+            }
+        ));
+        srpWorkers.setViewportView(tblWorkers);
+
+        javax.swing.GroupLayout pnlMainLayout = new javax.swing.GroupLayout(pnlMain);
+        pnlMain.setLayout(pnlMainLayout);
+        pnlMainLayout.setHorizontalGroup(
+            pnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMainLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlMainLayout.createSequentialGroup()
+                        .addComponent(btnReset)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(srpWorkers, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        pnlMainLayout.setVerticalGroup(
+            pnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMainLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(srpWorkers, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnReset)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        lblFilter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblFilter.setText("Filter by:");
+
+        lblAgeRange.setText("Age range:");
+
+        lblGender.setText("Gender:");
+
+        lblJob.setText("Job:");
+
+        btnFilterCancel.setText("Cancel");
+
+        btnFilter.setText("Filter");
+
+        txtAgeRangeMin.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,##0"))));
+        txtAgeRangeMin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAgeRangeMinActionPerformed(evt);
+            }
+        });
+
+        txtAgeRangeMax.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,##0"))));
+        txtAgeRangeMax.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAgeRangeMaxActionPerformed(evt);
+            }
+        });
+
+        lblAgeRangeTo.setText("to");
+
+        lblPriceRange.setText("Price range:");
+
+        txtPriceRangeMin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPriceRangeMinActionPerformed(evt);
+            }
+        });
+
+        lblPriceRangeTo.setText("to");
+
+        javax.swing.GroupLayout pnlFilterLayout = new javax.swing.GroupLayout(pnlFilter);
+        pnlFilter.setLayout(pnlFilterLayout);
+        pnlFilterLayout.setHorizontalGroup(
+            pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFilterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFilterLayout.createSequentialGroup()
+                        .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblJob, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnFilter))
+                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlFilterLayout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtJob, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pnlFilterLayout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(btnFilterCancel)))
+                        .addGap(42, 42, 42))
+                    .addGroup(pnlFilterLayout.createSequentialGroup()
+                        .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblAgeRange, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblPriceRange, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnlFilterLayout.createSequentialGroup()
+                        .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlFilterLayout.createSequentialGroup()
+                                .addComponent(txtPriceRangeMin, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblPriceRangeTo, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtPriceRangeMax, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlFilterLayout.createSequentialGroup()
+                                .addComponent(txtAgeRangeMin, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblAgeRangeTo)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtAgeRangeMax, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 24, Short.MAX_VALUE))))
+        );
+        pnlFilterLayout.setVerticalGroup(
+            pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFilterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblFilter)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblAgeRange)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtAgeRangeMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblAgeRangeTo)
+                    .addComponent(txtAgeRangeMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblGender)
+                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtJob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblJob))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblPriceRange)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPriceRangeMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPriceRangeMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPriceRangeTo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFilter)
+                    .addComponent(btnFilterCancel))
+                .addContainerGap())
+        );
 
         lblSearch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblSearch.setText("Search for: ");
@@ -78,16 +230,12 @@ public class HomeGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlSearchLayout.createSequentialGroup()
-                        .addComponent(lblSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(pnlSearchLayout.createSequentialGroup()
-                        .addGroup(pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnlSearchLayout.createSequentialGroup()
-                                .addComponent(btnSearch)
-                                .addGap(110, 110, 110)
-                                .addComponent(btnSearchCancel)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(btnSearch)
+                        .addGap(115, 115, 115)
+                        .addComponent(btnSearchCancel))
+                    .addComponent(lblSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlSearchLayout.setVerticalGroup(
             pnlSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,108 +250,6 @@ public class HomeGUI extends javax.swing.JFrame {
                     .addComponent(btnSearchCancel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        pnlFilter.setVisible(false);
-
-        lblFilter.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblFilter.setText("Filter by:");
-
-        lblAge.setText("Age:");
-
-        lblGender.setText("Gender:");
-
-        lblJob.setText("Job:");
-
-        cmbAge.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Do not apply--", "Apply" }));
-
-        cmbGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Do not apply--", "Male", "Female", " " }));
-
-        cmbJob.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Do not apply--", "Apply" }));
-
-        btnFilterCancel.setText("Cancel");
-
-        btnFilter.setText("Filter");
-
-        txtAge.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,##0"))));
-
-        cmbRating.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Do not apply--", "1", "2", "3", "4", "5" }));
-
-        lblRating.setText("Rating:");
-
-        javax.swing.GroupLayout pnlFilterLayout = new javax.swing.GroupLayout(pnlFilter);
-        pnlFilter.setLayout(pnlFilterLayout);
-        pnlFilterLayout.setHorizontalGroup(
-            pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlFilterLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(lblFilter, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                        .addComponent(lblAge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblGender, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnFilter)
-                        .addComponent(lblRating, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(lblJob, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cmbJob, 0, 169, Short.MAX_VALUE)
-                    .addComponent(cmbGender, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cmbAge, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnFilterCancel)
-                    .addComponent(txtJob)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbRating, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(42, 42, 42))
-        );
-        pnlFilterLayout.setVerticalGroup(
-            pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlFilterLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblFilter)
-                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlFilterLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(lblAge))
-                    .addGroup(pnlFilterLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cmbAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblGender))
-                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlFilterLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(cmbJob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtJob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlFilterLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(lblJob)))
-                .addGap(18, 18, 18)
-                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbRating, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblRating))
-                .addGap(18, 18, 18)
-                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnFilterCancel)
-                    .addComponent(btnFilter))
-                .addContainerGap())
-        );
-
-        btnReset.setText("Reset");
-
-        tblWorkers.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Job", "Price", "Name", "Age", "Gender", "Rating"
-            }
-        ));
-        srpWorkers.setViewportView(tblWorkers);
 
         menuMenu.setText("Menu");
 
@@ -221,34 +267,6 @@ public class HomeGUI extends javax.swing.JFrame {
 
         barMenu.add(menuMenu);
 
-        menuSearch.setText("Search");
-        menuSearch.addMenuListener(new javax.swing.event.MenuListener() {
-            public void menuCanceled(javax.swing.event.MenuEvent evt) {
-                menuSearchMenuCanceled(evt);
-            }
-            public void menuDeselected(javax.swing.event.MenuEvent evt) {
-                menuSearchMenuDeselected(evt);
-            }
-            public void menuSelected(javax.swing.event.MenuEvent evt) {
-                menuSearchMenuSelected(evt);
-            }
-        });
-        barMenu.add(menuSearch);
-
-        menuFilter.setText("Filter");
-        menuFilter.addMenuListener(new javax.swing.event.MenuListener() {
-            public void menuCanceled(javax.swing.event.MenuEvent evt) {
-                menuFilterMenuCanceled(evt);
-            }
-            public void menuDeselected(javax.swing.event.MenuEvent evt) {
-                menuFilterMenuDeselected(evt);
-            }
-            public void menuSelected(javax.swing.event.MenuEvent evt) {
-                menuFilterMenuSelected(evt);
-            }
-        });
-        barMenu.add(menuFilter);
-
         setJMenuBar(barMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -256,61 +274,38 @@ public class HomeGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(srpWorkers, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnReset)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addComponent(pnlFilter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(pnlFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(srpWorkers, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnReset)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(pnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void menuSearchMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_menuSearchMenuSelected
-    pnlSearch.setVisible(true);
-        if (pnlSearch.isVisible() == true) {
-            pnlFilter.setVisible(false);
-        }
-    }//GEN-LAST:event_menuSearchMenuSelected
+    private void txtAgeRangeMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeRangeMinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeRangeMinActionPerformed
 
-    private void menuFilterMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_menuFilterMenuSelected
-        pnlFilter.setVisible(true);
-        if (pnlFilter.isVisible() == true) {
-            pnlSearch.setVisible(false);
-        }
-    }//GEN-LAST:event_menuFilterMenuSelected
+    private void txtAgeRangeMaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeRangeMaxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeRangeMaxActionPerformed
 
-    private void menuSearchMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_menuSearchMenuDeselected
-        
-    }//GEN-LAST:event_menuSearchMenuDeselected
-
-    private void menuFilterMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_menuFilterMenuDeselected
-        
-    }//GEN-LAST:event_menuFilterMenuDeselected
-
-    private void menuSearchMenuCanceled(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_menuSearchMenuCanceled
-        pnlSearch.setVisible(false);
-    }//GEN-LAST:event_menuSearchMenuCanceled
-
-    private void menuFilterMenuCanceled(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_menuFilterMenuCanceled
-        pnlFilter.setVisible(false);
-    }//GEN-LAST:event_menuFilterMenuCanceled
+    private void txtPriceRangeMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceRangeMinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPriceRangeMinActionPerformed
 
     /**
      * @param args the command line arguments
@@ -337,29 +332,30 @@ public class HomeGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnSearchCancel;
-    private javax.swing.JComboBox<String> cmbAge;
-    private javax.swing.JComboBox<String> cmbGender;
-    private javax.swing.JComboBox<String> cmbJob;
-    private javax.swing.JComboBox<String> cmbRating;
     private javax.swing.JMenuItem itemHome;
     private javax.swing.JMenuItem itemProfile;
     private javax.swing.JMenuItem itemRequests;
     private javax.swing.JMenuItem itemSignOut;
-    private javax.swing.JLabel lblAge;
+    private javax.swing.JLabel lblAgeRange;
+    private javax.swing.JLabel lblAgeRangeTo;
     private javax.swing.JLabel lblFilter;
     private javax.swing.JLabel lblGender;
     private javax.swing.JLabel lblJob;
-    private javax.swing.JLabel lblRating;
+    private javax.swing.JLabel lblPriceRange;
+    private javax.swing.JLabel lblPriceRangeTo;
     private javax.swing.JLabel lblSearch;
-    private javax.swing.JMenu menuFilter;
     private javax.swing.JMenu menuMenu;
-    private javax.swing.JMenu menuSearch;
     private javax.swing.JPanel pnlFilter;
+    private javax.swing.JPanel pnlMain;
     private javax.swing.JPanel pnlSearch;
     private javax.swing.JScrollPane srpWorkers;
     private javax.swing.JTable tblWorkers;
-    private javax.swing.JFormattedTextField txtAge;
+    private javax.swing.JFormattedTextField txtAgeRangeMax;
+    private javax.swing.JFormattedTextField txtAgeRangeMin;
+    private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtJob;
+    private javax.swing.JTextField txtPriceRangeMax;
+    private javax.swing.JTextField txtPriceRangeMin;
     private javax.swing.JTextField txtSearch;
     // End of variables declaration//GEN-END:variables
 }

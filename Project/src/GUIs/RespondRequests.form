@@ -35,17 +35,17 @@
                   <Component id="lblGender" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblJob" alignment="0" max="32767" attributes="0"/>
                   <Component id="lblPrice" max="32767" attributes="0"/>
-                  <Component id="srpMoreInfo" alignment="0" pref="388" max="32767" attributes="0"/>
+                  <Component id="srpMoreInfo" alignment="0" pref="403" max="32767" attributes="0"/>
                   <Component id="lblMoreInfo" max="32767" attributes="0"/>
-                  <Component id="lblStatus" alignment="0" max="32767" attributes="0"/>
-                  <Component id="rdbReceived" alignment="0" max="32767" attributes="0"/>
-                  <Component id="rdbAccepted" alignment="0" max="32767" attributes="0"/>
-                  <Component id="rdbDenied" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="btnBack" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="btnApply" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnAccept" min="-2" pref="187" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btnDeny" max="32767" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -70,16 +70,11 @@
               <Component id="lblMoreInfo" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="srpMoreInfo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="lblStatus" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="rdbReceived" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="rdbAccepted" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="rdbDenied" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnApply" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnAccept" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnDeny" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -136,42 +131,21 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="lblStatus">
+    <Component class="javax.swing.JButton" name="btnAccept">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Status:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="rdbReceived">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="btgStatus"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Received"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="rdbAccepted">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="btgStatus"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Accepted"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="rdbDenied">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="btgStatus"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Denied"/>
+        <Property name="text" type="java.lang.String" value="Accept"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdbDeniedActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAcceptActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnApply">
+    <Component class="javax.swing.JButton" name="btnDeny">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Apply change"/>
+        <Property name="text" type="java.lang.String" value="Deny"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDenyActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
