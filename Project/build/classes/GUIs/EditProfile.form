@@ -72,21 +72,16 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="lblRole" alignment="0" pref="150" max="32767" attributes="0"/>
-                              <Component id="lblNumber" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblEmail" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="btnBack" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="btnApply" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                              <Component id="btnCancel" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="lblRole" alignment="0" pref="150" max="32767" attributes="0"/>
+                                      <Component id="lblNumber" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblEmail" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="btnBack" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnApply" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
@@ -94,6 +89,11 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txtNumber" alignment="1" min="-2" pref="194" max="-2" attributes="0"/>
                                   <Component id="txtEmail" alignment="1" min="-2" pref="194" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="btnApply1" min="-2" pref="130" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="btnCancel" min="-2" pref="130" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -155,7 +155,8 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnApply" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnCancel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnApply1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -209,7 +210,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="141" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
                       </Group>
@@ -227,7 +228,7 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="lblMoreInfo" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="51" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -335,6 +336,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancel"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNumber">
     </Component>
@@ -368,6 +372,14 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtGender">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnApply1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete account"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnApply1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
