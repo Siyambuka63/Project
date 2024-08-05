@@ -35,11 +35,10 @@ public class ProfileGUI extends javax.swing.JFrame {
         lblEmail = new javax.swing.JLabel();
         pnlJobs = new javax.swing.JPanel();
         lblJobs = new javax.swing.JLabel();
-        srpJobs = new javax.swing.JScrollPane();
-        tblJobs = new javax.swing.JTable();
         lblMoreInfo = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        lblPrice = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Profile");
@@ -58,23 +57,15 @@ public class ProfileGUI extends javax.swing.JFrame {
 
         lblEmail.setText("Email:");
 
-        lblJobs.setText("Jobs:");
-
-        tblJobs.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Job Title", "Job Price"
-            }
-        ));
-        srpJobs.setViewportView(tblJobs);
+        lblJobs.setText("Job:");
 
         lblMoreInfo.setText("Additional Information:");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
+
+        lblPrice.setText("Price:");
 
         javax.swing.GroupLayout pnlJobsLayout = new javax.swing.GroupLayout(pnlJobs);
         pnlJobs.setLayout(pnlJobsLayout);
@@ -83,10 +74,10 @@ public class ProfileGUI extends javax.swing.JFrame {
             .addGroup(pnlJobsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlJobsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(srpJobs, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
                     .addComponent(lblMoreInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblJobs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblJobs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         pnlJobsLayout.setVerticalGroup(
@@ -94,9 +85,9 @@ public class ProfileGUI extends javax.swing.JFrame {
             .addGroup(pnlJobsLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblJobs)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(srpJobs, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblPrice)
+                .addGap(18, 18, 18)
                 .addComponent(lblMoreInfo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -135,7 +126,7 @@ public class ProfileGUI extends javax.swing.JFrame {
                 .addComponent(lblNumber)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblEmail)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlJobs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnEdit)
@@ -192,8 +183,7 @@ public class ProfileGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lblMoreInfo;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblNumber;
+    private javax.swing.JLabel lblPrice;
     private javax.swing.JPanel pnlJobs;
-    private javax.swing.JScrollPane srpJobs;
-    private javax.swing.JTable tblJobs;
     // End of variables declaration//GEN-END:variables
 }

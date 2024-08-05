@@ -38,13 +38,13 @@ public class EditProfile extends javax.swing.JFrame {
         lblRole = new javax.swing.JLabel();
         pnlJob = new javax.swing.JPanel();
         lblJob = new javax.swing.JLabel();
-        btnAdd = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
-        srpJobs = new javax.swing.JScrollPane();
-        tblJobs = new javax.swing.JTable();
         lblMoreInfo = new javax.swing.JLabel();
         srpMoreInfo = new javax.swing.JScrollPane();
         txtMoreInfo = new javax.swing.JTextArea();
+        txtJob = new javax.swing.JTextField();
+        lblPrice = new javax.swing.JLabel();
+        txtPrice = new javax.swing.JTextField();
+        lblCurrency = new javax.swing.JLabel();
         btnApply = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
         txtNumber = new javax.swing.JTextField();
@@ -71,24 +71,7 @@ public class EditProfile extends javax.swing.JFrame {
 
         lblRole.setText("Role:");
 
-        lblJob.setText("Jobs:");
-
-        btnAdd.setText("Add job");
-
-        btnDelete.setText("Delete job");
-
-        tblJobs.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Job", "Price"
-            }
-        ));
-        srpJobs.setViewportView(tblJobs);
+        lblJob.setText("Job:");
 
         lblMoreInfo.setText("Additional Information: (Tell others more about you or your service)");
 
@@ -96,6 +79,10 @@ public class EditProfile extends javax.swing.JFrame {
         txtMoreInfo.setLineWrap(true);
         txtMoreInfo.setRows(5);
         srpMoreInfo.setViewportView(txtMoreInfo);
+
+        lblPrice.setText("Price:");
+
+        lblCurrency.setText("R");
 
         javax.swing.GroupLayout pnlJobLayout = new javax.swing.GroupLayout(pnlJob);
         pnlJob.setLayout(pnlJobLayout);
@@ -105,34 +92,39 @@ public class EditProfile extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlJobLayout.createSequentialGroup()
-                        .addComponent(btnAdd)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnDelete)
-                        .addGap(109, 109, 109))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlJobLayout.createSequentialGroup()
-                        .addComponent(srpJobs, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addContainerGap())
+                        .addGroup(pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblJob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblPrice, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                        .addGap(43, 43, 43)
+                        .addComponent(lblCurrency)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlJobLayout.createSequentialGroup()
+                                .addComponent(txtJob)
+                                .addGap(9, 9, 9))
+                            .addGroup(pnlJobLayout.createSequentialGroup()
+                                .addComponent(txtPrice)
+                                .addContainerGap())))
                     .addGroup(pnlJobLayout.createSequentialGroup()
-                        .addComponent(lblJob, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlJobLayout.createSequentialGroup()
-                        .addComponent(srpMoreInfo)
-                        .addContainerGap())
-                    .addGroup(pnlJobLayout.createSequentialGroup()
-                        .addComponent(lblMoreInfo)
-                        .addContainerGap(51, Short.MAX_VALUE))))
+                        .addGroup(pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(srpMoreInfo, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlJobLayout.createSequentialGroup()
+                                .addComponent(lblMoreInfo)
+                                .addGap(0, 45, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         pnlJobLayout.setVerticalGroup(
             pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlJobLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblJob)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(srpJobs, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
+                .addGroup(pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblJob)
+                    .addComponent(txtJob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDelete)
-                    .addComponent(btnAdd))
+                    .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPrice)
+                    .addComponent(lblCurrency))
                 .addGap(18, 18, 18)
                 .addComponent(lblMoreInfo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -207,9 +199,9 @@ public class EditProfile extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lblRole, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                        .addComponent(lblNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(lblRole, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(btnBack)
                                     .addComponent(btnApply, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))
@@ -256,19 +248,19 @@ public class EditProfile extends javax.swing.JFrame {
                     .addComponent(lblEmail))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRole)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(rdbCustomer)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rdbWorker))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblRole)
-                        .addGap(16, 16, 16)))
+                        .addComponent(rdbWorker)))
+                .addGap(18, 18, 18)
                 .addComponent(pnlJob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnApply)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCancel)
-                    .addComponent(btnApply1))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnApply)
+                        .addComponent(btnApply1)))
                 .addContainerGap())
         );
 
@@ -320,33 +312,33 @@ public class EditProfile extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgRoles;
-    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnApply;
     private javax.swing.JButton btnApply1;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnDelete;
     private javax.swing.JLabel lblAge;
+    private javax.swing.JLabel lblCurrency;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblFirstName;
     private javax.swing.JLabel lblGender;
     private javax.swing.JLabel lblJob;
     private javax.swing.JLabel lblMoreInfo;
     private javax.swing.JLabel lblNumber;
+    private javax.swing.JLabel lblPrice;
     private javax.swing.JLabel lblRole;
     private javax.swing.JLabel lblSurname;
     private javax.swing.JPanel pnlJob;
     private javax.swing.JRadioButton rdbCustomer;
     private javax.swing.JRadioButton rdbWorker;
-    private javax.swing.JScrollPane srpJobs;
     private javax.swing.JScrollPane srpMoreInfo;
-    private javax.swing.JTable tblJobs;
     private javax.swing.JFormattedTextField txtAge;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtGender;
+    private javax.swing.JTextField txtJob;
     private javax.swing.JTextArea txtMoreInfo;
     private javax.swing.JTextField txtNumber;
+    private javax.swing.JTextField txtPrice;
     private javax.swing.JTextField txtSurname;
     // End of variables declaration//GEN-END:variables
 }

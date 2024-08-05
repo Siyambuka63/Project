@@ -46,6 +46,8 @@ public class HomeGUI extends javax.swing.JFrame {
         txtPriceRangeMin = new javax.swing.JTextField();
         txtPriceRangeMax = new javax.swing.JTextField();
         lblPriceRangeTo = new javax.swing.JLabel();
+        lblCurrencyMin = new javax.swing.JLabel();
+        lblCurrencyMax = new javax.swing.JLabel();
         pnlSearch = new javax.swing.JPanel();
         lblSearch = new javax.swing.JLabel();
         txtSearch = new javax.swing.JTextField();
@@ -136,6 +138,10 @@ public class HomeGUI extends javax.swing.JFrame {
 
         lblPriceRangeTo.setText("to");
 
+        lblCurrencyMin.setText("R");
+
+        lblCurrencyMax.setText("R");
+
         javax.swing.GroupLayout pnlFilterLayout = new javax.swing.GroupLayout(pnlFilter);
         pnlFilter.setLayout(pnlFilterLayout);
         pnlFilterLayout.setHorizontalGroup(
@@ -145,22 +151,6 @@ public class HomeGUI extends javax.swing.JFrame {
                 .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlFilterLayout.createSequentialGroup()
                         .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblJob, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnFilter))
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlFilterLayout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtJob, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(pnlFilterLayout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addComponent(btnFilterCancel)))
-                        .addGap(42, 42, 42))
-                    .addGroup(pnlFilterLayout.createSequentialGroup()
-                        .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblFilter, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblAgeRange, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblPriceRange, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -168,18 +158,38 @@ public class HomeGUI extends javax.swing.JFrame {
                     .addGroup(pnlFilterLayout.createSequentialGroup()
                         .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlFilterLayout.createSequentialGroup()
-                                .addComponent(txtPriceRangeMin, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblPriceRangeTo, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtPriceRangeMax, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnlFilterLayout.createSequentialGroup()
                                 .addComponent(txtAgeRangeMin, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(lblAgeRangeTo)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtAgeRangeMax, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 24, Short.MAX_VALUE))))
+                                .addComponent(txtAgeRangeMax, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlFilterLayout.createSequentialGroup()
+                                .addComponent(lblCurrencyMin)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtPriceRangeMin, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblPriceRangeTo, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblCurrencyMax)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtPriceRangeMax, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlFilterLayout.createSequentialGroup()
+                                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblGender, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblJob, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnFilter))
+                                .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlFilterLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtJob, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(18, 18, 18))
+                                    .addGroup(pnlFilterLayout.createSequentialGroup()
+                                        .addGap(94, 94, 94)
+                                        .addComponent(btnFilterCancel)
+                                        .addGap(0, 0, Short.MAX_VALUE)))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         pnlFilterLayout.setVerticalGroup(
             pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,14 +211,16 @@ public class HomeGUI extends javax.swing.JFrame {
                 .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtJob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblJob))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(lblPriceRange)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPriceRangeMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtPriceRangeMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPriceRangeTo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(lblPriceRangeTo)
+                    .addComponent(lblCurrencyMin)
+                    .addComponent(lblCurrencyMax))
+                .addGap(18, 18, 18)
                 .addGroup(pnlFilterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFilter)
                     .addComponent(btnFilterCancel))
@@ -275,10 +287,9 @@ public class HomeGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnlFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pnlMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlFilter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -338,6 +349,8 @@ public class HomeGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemSignOut;
     private javax.swing.JLabel lblAgeRange;
     private javax.swing.JLabel lblAgeRangeTo;
+    private javax.swing.JLabel lblCurrencyMax;
+    private javax.swing.JLabel lblCurrencyMin;
     private javax.swing.JLabel lblFilter;
     private javax.swing.JLabel lblGender;
     private javax.swing.JLabel lblJob;

@@ -63,10 +63,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="pnlSearch" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="pnlMain" min="-2" max="-2" attributes="0"/>
-                  <Component id="pnlFilter" alignment="0" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="pnlMain" max="32767" attributes="0"/>
+                  <Component id="pnlFilter" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
@@ -188,28 +187,6 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblGender" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="lblJob" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="btnFilter" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtJob" min="-2" pref="169" max="-2" attributes="0"/>
-                                      <Component id="txtGender" min="-2" pref="169" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                  <Component id="btnFilterCancel" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="lblFilter" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="lblAgeRange" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="lblPriceRange" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
@@ -218,13 +195,6 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="txtPriceRangeMin" min="-2" pref="169" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lblPriceRangeTo" min="-2" pref="11" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="txtPriceRangeMax" min="-2" pref="169" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="txtAgeRangeMin" min="-2" pref="50" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -232,8 +202,41 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="txtAgeRangeMax" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="lblCurrencyMin" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtPriceRangeMin" min="-2" pref="169" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lblPriceRangeTo" min="-2" pref="11" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lblCurrencyMax" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txtPriceRangeMax" min="-2" pref="169" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblGender" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="lblJob" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="btnFilter" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="txtJob" min="-2" pref="169" max="-2" attributes="0"/>
+                                              <Component id="txtGender" min="-2" pref="169" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                                          <Component id="btnFilterCancel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <EmptySpace min="0" pref="24" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -262,15 +265,17 @@
                       <Component id="txtJob" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblJob" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="lblPriceRange" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtPriceRangeMin" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtPriceRangeMax" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblPriceRangeTo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblCurrencyMin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblCurrencyMax" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnFilter" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnFilterCancel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -358,6 +363,16 @@
         <Component class="javax.swing.JLabel" name="lblPriceRangeTo">
           <Properties>
             <Property name="text" type="java.lang.String" value="to"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblCurrencyMin">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="R"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblCurrencyMax">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="R"/>
           </Properties>
         </Component>
       </SubComponents>
